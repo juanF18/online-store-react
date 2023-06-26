@@ -1,7 +1,9 @@
+import { ListaProductos } from "../components/templates/lista-productos";
+
 export function ProductosPage() {
   return (
     <div>
-      <h1>ProductosPage</h1>
+      <ListaProductos />
     </div>
   );
 }
