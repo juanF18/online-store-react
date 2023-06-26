@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import NavMovile from "../../atoms/nav-movile";
+import { NavMovile } from "../../atoms";
 
 export default function SubMenuNavbar() {
   return (

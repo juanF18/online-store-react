@@ -1,1 +1,1 @@
-export * from "./templates/navbar";
+export * from "./templates";
