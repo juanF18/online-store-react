@@ -1,7 +1,5 @@
+import { FormularioRegistro } from "../components";
+
 export function RegistroPage() {
-  return (
-    <div>
-      <h1>Registro</h1>
-    </div>
-  );
+  return <FormularioRegistro />;
 }
