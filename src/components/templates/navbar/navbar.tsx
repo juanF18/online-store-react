@@ -36,13 +36,11 @@ export function Navbar() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <NavLink to="/productos">
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Productos
-                  </a>
+                <NavLink
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  to="/productos"
+                >
+                  Productos
                 </NavLink>
                 <div className="relative inline-block text-left" ref={menuRef}>
                   <button
@@ -64,25 +62,21 @@ export function Navbar() {
                       tabIndex={-1}
                     >
                       <div className="py-1" role="none">
-                        <NavLink to="/nuevo-pedido">
-                          <a
-                            href="#"
-                            className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                            role="menuitem"
-                            tabIndex={-1}
-                          >
-                            Realizar Pedido
-                          </a>
+                        <NavLink
+                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                          tabIndex={-1}
+                          to="/nuevo-pedido"
+                        >
+                          Realizar Pedido
                         </NavLink>
-                        <NavLink to="pedidos">
-                          <a
-                            href="#"
-                            className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                            role="menuitem"
-                            tabIndex={-1}
-                          >
-                            Visualizar Pedidos
-                          </a>
+                        <NavLink
+                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                          role="menuitem"
+                          tabIndex={-1}
+                          to="pedidos"
+                        >
+                          Visualizar Pedidos
                         </NavLink>
                       </div>
                     </div>
@@ -93,13 +87,11 @@ export function Navbar() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <NavLink to="/registro">
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Registrarse
-                </a>
+              <NavLink
+                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                to="/registro"
+              >
+                Registrarse
               </NavLink>
             </div>
           </div>
