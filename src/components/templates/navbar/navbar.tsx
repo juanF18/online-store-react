@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import SubMenuNavbar from "./subMenuNavbar";
+import { NavLink } from "react-router-dom";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,16 +30,20 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-white font-bold text-lg">Logo</span>
+              <NavLink to="/">
+                <span className="text-white font-bold text-lg">Logo</span>
+              </NavLink>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  Productos
-                </a>
+                <NavLink to="/productos">
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Productos
+                  </a>
+                </NavLink>
                 <div className="relative inline-block text-left" ref={menuRef}>
                   <button
                     onClick={toggleMenu}
@@ -59,22 +64,26 @@ export function Navbar() {
                       tabIndex={-1}
                     >
                       <div className="py-1" role="none">
-                        <a
-                          href="#"
-                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                          role="menuitem"
-                          tabIndex={-1}
-                        >
-                          Realizar Pedido
-                        </a>
-                        <a
-                          href="#"
-                          className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                          role="menuitem"
-                          tabIndex={-1}
-                        >
-                          Visualizar Pedidos
-                        </a>
+                        <NavLink to="/nuevo-pedido">
+                          <a
+                            href="#"
+                            className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                            role="menuitem"
+                            tabIndex={-1}
+                          >
+                            Realizar Pedido
+                          </a>
+                        </NavLink>
+                        <NavLink to="pedidos">
+                          <a
+                            href="#"
+                            className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                            role="menuitem"
+                            tabIndex={-1}
+                          >
+                            Visualizar Pedidos
+                          </a>
+                        </NavLink>
                       </div>
                     </div>
                   )}
@@ -84,12 +93,14 @@ export function Navbar() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Registrarse
-              </a>
+              <NavLink to="/registro">
+                <a
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  Registrarse
+                </a>
+              </NavLink>
             </div>
           </div>
           <div className="md:hidden">
