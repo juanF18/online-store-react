@@ -1,14 +1,18 @@
 import { Form, Formik } from "formik";
 import { Boton, InputField } from "../../atoms";
 import { validationSchema, valoresIniciales } from "./registro.data";
+import { crearUsuairo } from "../../../services/endpoints";
 export function FormularioRegistro() {
   return (
     <div className="flex items-center justify-center h-screen">
       <Formik
         initialValues={valoresIniciales()}
         validationSchema={validationSchema()}
-        onSubmit={(values) => {
-          console.log(values);
+        onSubmit={async (values) => {
+          const { confirmarContrasena, ...data } = values;
+          console.log(confirmarContrasena);
+
+          await crearUsuairo(data);
         }}
       >
         <Form className="bg-white shadow-md rounded px-8 py-6">
@@ -22,7 +26,7 @@ export function FormularioRegistro() {
           <InputField
             label="Correo Electrónico"
             type="email"
-            name="email"
+            name="correo_electronico"
             placeholder="Ingrese su correo electrónico"
           />
           <InputField

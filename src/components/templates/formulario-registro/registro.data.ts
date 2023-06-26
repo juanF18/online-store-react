@@ -1,12 +1,18 @@
 import * as Yup from "yup";
+import { Usuario } from "../../../interfaces/usuario.intefaces";
+
+interface ValoresUsuario extends Usuario {
+  confirmarContrasena: string;
+}
 
 export function valoresIniciales() {
-  return {
+  const valoresIniciales = {
     nombre: "",
-    email: "",
+    correo_electronico: "",
     contrasena: "",
     confirmarContrasena: "",
   };
+  return valoresIniciales;
 }
 
 export function validationSchema() {
@@ -14,7 +20,7 @@ export function validationSchema() {
     nombre: Yup.string()
       .required("El nombre es requerido")
       .min(3, "El nombre es de minimo 3 caracteres"),
-    email: Yup.string()
+    correo_electronico: Yup.string()
       .email("Correo electrónico inválido")
       .required("El correo es requerido"),
     contrasena: Yup.string()
