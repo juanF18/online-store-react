@@ -1,4 +1,4 @@
-import { Form, Formik, FormikProvider, useFormik } from "formik";
+import { Form, Formik } from "formik";
 import { Boton, InputField } from "../../atoms";
 import { validationSchema, valoresIniciales } from "./registro.data";
 export function FormularioRegistro() {
